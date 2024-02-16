@@ -78,7 +78,9 @@
     "ostream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "stack": "cpp",
+    "string": "cpp"
   },
   "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }

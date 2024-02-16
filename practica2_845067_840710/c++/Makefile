@@ -1,17 +1,17 @@
 PROG:=main
-SRCS:=instruccion.cc main.cc
+SRCS:=main.cc
 
-CXX:= g++ -march=native -O3 -std=c++11
-
-all: $(PROG)
+CXX:= g++ -O2
 
 OBJS:=$(SRCS:.cc=.o)
+
+all: $(PROG) 
 
 $(PROG): $(OBJS)
 	$(CXX) -o $@ $(OBJS)
 
 .cc.o:
-	$(CXX) -c $< 
+	$(CXX) -c $<
 
 .cc.s:
 	$(CXX) -c -S $<
@@ -19,12 +19,13 @@ $(PROG): $(OBJS)
 edit:
 	geany -s *.h *.cc &
 
-#Compilacion
-instruccion.o: instruccion.cc
-main.o: main.cc 
-
 clean:
 	@rm -f $(PROG) $(OBJS) core *.s
-
-descompilar:
-	@rm -f $(PROG) $(OBJS) core *.s main.exe
+	
+main.o: sumaProg.h main.cc
+read.o: read.h
+add.o: add.h
+write.o: write.h
+programa.o: programa.h
+sumaProg.o: sumaProg.h
+instruccion.o: instruccion.h
