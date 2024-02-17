@@ -11,12 +11,14 @@ protected:
     int numInstr;
     int pc;
 public:
+
     // Constructor
     Programa(std::stack<int>* p,int _numInstr, int _pc):
         pila(p),numInstr(_numInstr), pc(_pc)
     {
         instrucciones = new Instruccion*[_numInstr]; 
     }
+
     // Destructor
     ~Programa() {
         for(int i=0; i < numInstr; i++){
@@ -24,6 +26,7 @@ public:
         }
         delete[] instrucciones;
     }
+
     // Método que ejecuta un programa
     void ejecutar(std::ostream &os){
         os << "Ejecución del programa: " << std::endl;
@@ -31,7 +34,8 @@ public:
             instrucciones[pc]->ejecuta(pc);
         }
     }
-    // Método que lista las instrucciones de un programa
+
+    // Método que lista todas las instrucciones de un programa
     void listarse(std::ostream& os) const {
         for(int i=0; i < numInstr; i++){
             instrucciones[i]->representar(i);

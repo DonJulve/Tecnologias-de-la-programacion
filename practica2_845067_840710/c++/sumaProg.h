@@ -9,6 +9,7 @@
 
 class Suma: public Programa {
 public:
+
     // Ejecuta el programa que suma dos numeros
     Suma(std::stack<int>* p)
         :Programa(p, 4, 0)
@@ -19,6 +20,8 @@ public:
             instrucciones[3] = new Write(p);
          
     }
+
+    //Destructor
     ~Suma() 
     {}
 };

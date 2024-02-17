@@ -15,7 +15,8 @@
 
 class Factorial : public Programa {
 public:
-    // Programa que haya el factorial de un número
+
+    // Programa que calcula el factorial de un número
     Factorial(std::stack<int>* p) : Programa(p,14,0){
         instrucciones[0] = new Push(p,1);
         instrucciones[1] = new Read(p);
@@ -32,5 +33,7 @@ public:
         instrucciones[12] = new Swap(p);
         instrucciones[13] = new Write(p);
     }
+
+    //Destructor
     ~Factorial(){}
 };

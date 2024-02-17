@@ -11,6 +11,7 @@
 
 class Cuenta: public Programa {
 public:
+
     //Método que ejecuta el programa que realiza una cuenta atrás
     Cuenta(std::stack<int>* p)
         :Programa(p, 7, 0)
@@ -24,6 +25,8 @@ public:
             instrucciones[6] = new Jumpif(p, 1);
          
     }
+
+    //Destructor
     ~Cuenta() 
     {}
 };

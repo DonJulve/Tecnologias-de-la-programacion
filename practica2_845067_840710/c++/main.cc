@@ -4,6 +4,8 @@
 #include "cuentaAtras.h"
 #include "factorial.h"
 
+// Programa principal en el que se listan y se ejecutan las instrucciones 
+// de los 3 programas de la práctica
 int main(){
     std::stack<int>* pila = new std::stack<int>;
     std::cout << "Ejecución de la suma de dos números" << std::endl;

@@ -7,12 +7,16 @@
 
 class Write : public Instruccion {
 public:
+
     // Constructor
     Write(std::stack<int>* p):
         Instruccion(p, "write")
     {}
+
+    // Destructor
     ~Write(){}
-    // desapila un valor de la pila y lo muestra por la salida estándar (pantalla) al usuario
+
+    // Desapila un valor de la pila y lo muestra por la salida estándar (pantalla) al usuario
     void ejecuta(int& pc) override {
         int a = pila->top();
         pila->pop();

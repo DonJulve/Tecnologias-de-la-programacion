@@ -7,10 +7,14 @@
 class Swap : public Instruccion {
 
 public:
-    //Cosntructor
+    //Constructor
     Swap(std::stack<int>* p) : Instruccion(p, "swap"){}
+
+    //Destructor
     ~Swap(){}
-    // intercambia dos elementos en la cima de la pila (desapila dos valores y los reapila en orden inverso)
+
+    // Intercambia dos elementos en la cima de la pila desapilando dos valores
+    // y apilándolos en el orden inverso
     void ejecuta(int& pc) override {
         int a = pila->top();
         pila->pop();

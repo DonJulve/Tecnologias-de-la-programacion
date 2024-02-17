@@ -6,12 +6,16 @@
 
 class Dup : public Instruccion {
 public:
+
     //Constructor
     Dup(std::stack<int>* p):
         Instruccion(p, "dup")
     {}
+
+    //Destructor
     ~Dup(){}
-    // duplica la cima de la pila (desapila su valor y lo reapila dos veces)
+
+    // Duplica la cima de la pila desapilando su valor y apilándolo dos veces
     void ejecuta(int& pc) override {
         int a = pila->top();
         pila->pop();
