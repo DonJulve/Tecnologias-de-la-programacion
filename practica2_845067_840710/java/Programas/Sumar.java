@@ -1,5 +1,5 @@
 /**
- * Autor: Alejandro Benedi Andrés   Nip: 843826 
+ * Autor: Jorge Jaime Modrego   Nip: 845067 
  * Autor: Javier Julve Yubero       Nip: 840710
  *            
  * Coms: En este fichero se encuentra toda la implementacion
