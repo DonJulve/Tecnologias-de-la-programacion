@@ -1,4 +1,10 @@
-
+/**
+ * Autor: Jorge Jaime Modrego   Nip: 845067 
+ * Autor: Javier Julve Yubero       Nip: 840710
+ *            
+ * Coms: En este fichero se encuentra la implemetacion
+ *       de la instruccion "Add" en c++
+**/
 #pragma once
 #include "instruccion.h"
 #include <stack>

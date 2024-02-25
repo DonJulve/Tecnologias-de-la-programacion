@@ -1,3 +1,10 @@
+/**
+ * Autor: Jorge Jaime Modrego   Nip: 845067 
+ * Autor: Javier Julve Yubero       Nip: 840710
+ *            
+ * Coms: En este fichero se encuentra el "Main". En el
+ * se crean y se mandan a ejecutar los 3 programas test
+**/
 #include <stack>
 #include <iostream>
 #include "sumaProg.h"

@@ -1,3 +1,10 @@
+/**
+ * Autor: Jorge Jaime Modrego   Nip: 845067 
+ * Autor: Javier Julve Yubero       Nip: 840710
+ *            
+ * Coms: En este fichero se encuentra toda la implementacion
+ *       del programa "Cuenta atras".
+**/
 #pragma once
 #include <stack>
 #include <iostream>

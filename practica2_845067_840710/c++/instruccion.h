@@ -1,3 +1,12 @@
+/**
+ * Autor: Jorge Jaime Modrego   Nip: 845067 
+ * Autor: Javier Julve Yubero       Nip: 840710
+ *            
+ * Coms: En este fichero se encuentra toda las definiciones 
+ *       de los metodos de la clase padre de las "Instrucciones"
+ *       De esta "super clase" saldran todas las instrucciones 
+ *       de la practica
+**/
 #pragma once
 #include <stack>
 #include <iostream>

@@ -80,7 +80,19 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "stack": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "array": "cpp",
+    "cmath": "cpp",
+    "deque": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp",
+    "tuple": "cpp",
+    "fstream": "cpp",
+    "numeric": "cpp",
+    "sstream": "cpp",
+    "utility": "cpp"
   },
   "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
