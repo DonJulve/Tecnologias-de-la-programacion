@@ -1,3 +1,8 @@
+# //---------------------------------------------------------------------------
+# // File: Makefile
+# // Authors: Javier Julve Yubero (840710) y Jorge Jaime Modrego(845067)
+# // Date: Marzo 2023
+# //---------------------------------------------------------------------------
 PROG:=main
 SRCS:=main.cc
 
@@ -12,7 +17,7 @@ $(PROG): $(OBJS)
 	$(CXX) -o $@ $^
 
 .cc.o:
-	$(CXX) -c -MMD -std=c++11 $< 
+	$(CXX) -c -MMD $<
 
 .PHONY: edit go
 
@@ -25,4 +30,5 @@ edit:
 clean:
 	@rm -f $(PROG) $(OBJS) $(DEPS) *.gch core tags
 
--include $(DEPS)
+main.o: main.cc practica3.h
+
