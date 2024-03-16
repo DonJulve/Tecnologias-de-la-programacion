@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // File: main.cc
 // Authors: Javier Julve Yubero (840710) y Jorge Jaime Modrego(845067)
-// Date: Marzo 2023
+// Date: Marzo 2024
 //---------------------------------------------------------------------------
 #include "practica3.h"
 #include <iostream>
@@ -26,6 +26,11 @@ int main(int argc, char** argv)
 	contenedor_toxico->guardar(discos_melendi);
 #if 0
 	// Esto no deberia compilar
+
+	// La explicación de esto es porque discos_melendi es de tipo Toxico y no de tipo Carga,
+	// por lo que no se puede guardar en un contenedor de Carga ya que no se ha hecho la herencia correspondiente
+	// para que un contenedor con herencia de clase Carga pueda guardar algo de clase Toxico se debería incluir en su herencia o bien
+	// incluir la clase Tóxico en la herencia de la clase carga.
 	contenedor_estandar->guardar(discos_melendi);
 #endif
 
@@ -46,6 +51,10 @@ int main(int argc, char** argv)
 
 #if 0
 	// Esto no deberia compilar
+	
+	// La explicación de esto es porque elvis_presley es de tipo SerVivo y no de tipo Carga,
+	// pero Camión tiene un método guardar que recibe un puntero a Carga, por lo que no se puede guardar un puntero a SerVivo 
+	// en un contenedor de Carga ya que no se ha hecho la herencia correspondiente como en el caso anterior.
 	camion.guardar(elvis_presley);
 #endif
 

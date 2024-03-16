@@ -1,14 +1,14 @@
 //---------------------------------------------------------------------------
 // File: camion.h
 // Authors: Javier Julve Yubero (840710) y Jorge Jaime Modrego(845067)
-// Date: Marzo 2023
+// Date: Marzo 2024
 //---------------------------------------------------------------------------
 #include "almacen.h"
 #include <string>
 #include "carga.h"
 #pragma once
 
-
+//Clase Camion que hereda de Almacen y con tipo de dato Carga, implementando sus métodos virtuales
 class Camion : public Almacen<Carga> {
 private:
     std::string n; // nombre del elemento ("Camión")

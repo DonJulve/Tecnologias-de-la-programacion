@@ -1,11 +1,12 @@
 //---------------------------------------------------------------------------
 // File: contenedor.h
 // Authors: Javier Julve Yubero (840710) y Jorge Jaime Modrego(845067)
-// Date: Marzo 2023
+// Date: Marzo 2024
 //---------------------------------------------------------------------------
 #include "carga.h"
 #include "almacen.h"
 #pragma once
+// Clase Contenedor que hereda de Carga y Almacen, con tipo de dato T, implementando sus métodos virtuales
 template <typename T>
 class Contenedor : public Carga, public Almacen<T> {
 public:

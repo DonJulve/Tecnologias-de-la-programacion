@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // File: cargable.h
 // Authors: Javier Julve Yubero (840710) y Jorge Jaime Modrego(845067)
-// Date: Marzo 2023
+// Date: Marzo 2024
 //---------------------------------------------------------------------------
 #pragma once
 
@@ -10,6 +10,8 @@
 #include <vector>
 #include <string>
 
+// Clase Cargable que representa un elemento que puede ser cargado en un contenedor y que servirá como herencia para el resto del tipo de
+// elementos que se pueden cargar en un vehiculo
 class Cargable {
 protected: 
     double v; // volumen del elemento
