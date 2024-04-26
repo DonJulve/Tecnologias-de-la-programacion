@@ -1,5 +1,5 @@
 /**
- * Autor: Alejandro Benedi Andrés   Nip: 843826 
+ * Autor: Jorge Jaime Modrego       Nip: 845067 
  * Autor: Javier Julve Yubero       Nip: 840710
  *            
  * Coms: En este fichero se encuentran todos los
@@ -16,6 +16,7 @@
 #include <sstream>
 #include <stack>
 
+// Clase Archivos
 class Archivos {
 protected:
     std::string _nombre;
@@ -45,6 +46,7 @@ public:
     }
 };
 
+// Clase Directorio
 class Directorio : public Archivos {
 protected:
     std::map<std::string, std::shared_ptr<Archivos>> nodos; // Aqui se guardan todos los archivos del directorio (Directorio, Archivo, Enlace)
@@ -149,6 +151,7 @@ public:
     }
 }; 
 
+// Clase Fichero
 class Fichero : public Archivos {
 public:
 
@@ -164,6 +167,7 @@ public:
     
 }; 
 
+// Clase Enlace
 class Enlace : public Archivos {
 protected:
 
