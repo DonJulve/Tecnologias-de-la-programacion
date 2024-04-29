@@ -1,8 +1,8 @@
 -- 
---  Autor: Alejandro Benedi Andrés   Nip: 843826 
---  Autor: Javier Julve Yubero       Nip: 840710
+--  Autores: Jorge Jaime Modrego   Nip: 845067 
+--           Javier Julve Yubero   Nip: 840710
 --              
---  Coms: En este fichero se encuentra el "Main" del programa
+--  Comentarios: En este fichero se encuentra el "Main" del programa
 --        que contiene las llamadas a las funciones que crean
 --        los diferentes graficos tortugas.
 --        Al ejecutar el programa, creara todas los .svg de los graficos de tortuga

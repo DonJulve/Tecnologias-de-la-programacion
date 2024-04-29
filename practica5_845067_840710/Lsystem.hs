@@ -1,8 +1,8 @@
 -- 
---  Autor: Alejandro Benedi Andrés   Nip: 843826 
---  Autor: Javier Julve Yubero       Nip: 840710
+--  Autores: Jorge Jaime Modrego   Nip: 845067 
+--           Javier Julve Yubero   Nip: 840710
 --              
---  Coms: En este fichero se encuentra el modulo Lsystem
+--  Comentarios: En este fichero se encuentra el modulo Lsystem
 --        que contiene las reglas para crear los 
 --        diferentes graficos de tortuga. Asi como las 
 --        funciones para crear las cadenas de caracteres.

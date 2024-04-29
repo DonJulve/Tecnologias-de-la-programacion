@@ -1,8 +1,8 @@
 -- 
---  Autor: Alejandro Benedi Andrés   Nip: 843826 
---  Autor: Javier Julve Yubero       Nip: 840710
+--  Autores: Jorge Jaime Modrego   Nip: 845067 
+--           Javier Julve Yubero   Nip: 840710
 --              
---  Coms: En este fichero se encuentra el modulo Tplot
+--  Comentarios: En este fichero se encuentra el modulo Tplot
 --        que contiene las funciones para pasar de 
 --        una cadena de caracteres a una lista de
 --        posiciones para poder representar el grafico
