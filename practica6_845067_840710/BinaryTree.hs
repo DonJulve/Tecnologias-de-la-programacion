@@ -10,11 +10,11 @@ import Data.List
 --Dato de tipo tree
 data Tree a = Vacio | Leaf a (Tree a) (Tree a)
 
--- Función que genera un árbol vacío, sin ningún elemento
+-- Función que genera un árbol vacío sin ningun tipo de elemento
 empty :: Tree a 
 empty = Vacio
 
--- Función que devuelve un árbol que consta de una sola hoja que contiene el elemento a
+-- Función que devuelve un árbol que tiene una sola hoja que contiene el elemento a
 leaf :: a -> Tree a
 leaf a = Leaf a (empty) (empty)
 
@@ -26,18 +26,18 @@ tree x Vacio rc  = Leaf x (empty) (rc)
 tree x lc Vacio = Leaf x (lc) (empty)
 tree x lc rc = Leaf x (lc) (rc)
 
--- Función que devuelve el número de eleemntos del árbol
+-- Función que devuelve el número de elementos del árbol
 size :: Tree a -> Integer
 size Vacio = 0
 size (Leaf a Vacio Vacio) = 1
 size (Leaf a (lc) (rc)) = 1 + size lc + size rc
 
--- Función que dependiendo el nivel de la hoja, la muestra con su tabulación correspondiente
+-- Función que dependiendo el nivel de la hoja la muestra con su tabulación que le toque
 tab :: Integer -> String
 tab 0 = ""
 tab x = "  " ++ (tab (x-1)) 
 
--- Función para mostrar graficamente un árbol
+-- Función para mostrar graficamente un árbol por terminal
 showT :: (Show a) => Tree a -> Integer -> String 
 showT (Vacio) x = "()"
 showT (Leaf a (Vacio) (Vacio)) x = show a
@@ -46,7 +46,7 @@ showT (Leaf a (lc) (rc)) x = show a ++ "\n" ++  tab x ++ "╰─ " ++ showT (lc)
 instance (Show a) => Show (Tree a) where
   show a = showT a 0 
 
--- Función que añade el elemento x al árbol, devolviendo el árbol resultante
+-- Función que añade el elemento x al árbol, devolviendo el árbol resultante despues de añadir el elemento
 add :: Ord a => Tree a -> a -> Tree a
 add Vacio x = leaf x
 add (Leaf y lc rc) x
