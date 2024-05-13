@@ -90,9 +90,9 @@ balance Vacio = (empty)
 balance t = buildBalanced (inorder t)
 
 -- Función que busca en el árbol los elementos que están entre los valores xmin y xmax y los devuelve en una lista
-between :: (Ord a, Num a) => Tree a -> a -> a -> [a]
+between :: Ord a => Tree a -> a -> a -> [a]
 between Vacio _ _ = []
 between  (Leaf x lc rc) xmin xmax
   | x < xmin = between rc xmin xmax
   | x > xmax = between lc xmin xmax
-  | otherwise = x : between lc xmin x ++ between rc (x+1) xmax
+  | otherwise = x : (between lc xmin xmax) ++ (between rc xmin xmax)
