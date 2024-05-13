@@ -40,4 +40,3 @@ test_list l = do
     t0 = build l
     t1 = balance t0
     t2 = buildBalanced l
-    

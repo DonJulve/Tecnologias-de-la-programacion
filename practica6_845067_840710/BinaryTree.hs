@@ -41,7 +41,7 @@ tab x = "  " ++ (tab (x-1))
 showT :: (Show a) => Tree a -> Integer -> String 
 showT (Vacio) x = "()"
 showT (Leaf a (Vacio) (Vacio)) x = show a
-showT (Leaf a (lc) (rc)) x = show a ++ "\n" ++  tab x ++ "|- " ++ showT (lc) (x + 1) ++ "\n" ++  tab x ++ "|- " ++ showT (rc) (x + 1)
+showT (Leaf a (lc) (rc)) x = show a ++ "\n" ++  tab x ++ "╰─ " ++ showT (lc) (x + 1) ++ "\n" ++  tab x ++ "╰─ " ++ showT (rc) (x + 1)
 
 instance (Show a) => Show (Tree a) where
   show a = showT a 0 
@@ -64,6 +64,7 @@ build xs = buildAux xs empty
 -- Función que construye un árbol equilibrado, ordenando la lista y dividiéndola en dos por la mediana
 buildBalanced :: Ord a => [a] -> Tree a 
 buildBalanced [] = Vacio
+buildBalanced [x] = Leaf x (empty) (empty)
 buildBalanced xs = Leaf x (buildBalanced izq) (buildBalanced der)
   where
     sorted = sort xs
