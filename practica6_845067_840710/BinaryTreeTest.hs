@@ -1,30 +1,43 @@
 import BinaryTree
 
-tree0 = tree "R" (tree "HI" (leaf "NII") (leaf "NID")) (tree "HD" (leaf "NDI") (leaf "NDD"))
-tree1a = build [3, 2, 2, 5, 1, 4, 4]
-tree1b = build [2, 5, 1, 3, 2, 4, 4]
-tree2  = build ["Adolfo","Diego","Juan","Pedro","Tomas"]
-tree3  = build [1..6]
+tree0 = tree 1 (tree 2 (leaf 3) (leaf 4)) (tree 5 empty (leaf 6))
+tree1 = tree "R" (tree "HI" (leaf "NII") (leaf "NID")) (tree "HD" (leaf "NDI") (leaf "NDD"))
 
 main = do
-  print $ size tree0
-  print tree0
-  print $ preorder tree0
-  print $ postorder tree0
-  print $ inorder tree0
+  test_tree tree0
+  test_tree tree1
 
-  print tree1a
-  print $ inorder tree1a
-  print $ balance tree1a
-  print $ between tree1a 2 4
-  print tree1b
-  print $ inorder tree1b
-  print $ balance tree1b
-  print $ between tree1b 2 4
+  test_list [3, 2, 2, 5, 1, 4, 4]
+  test_list [2, 5, 1, 3, 2, 4, 4]
+  test_list ["Adolfo","Diego","Juan","Pedro","Tomas"]
+  test_list [1..16]
+  test_list [3,3,3,3,3]
+  test_list [1,3,3,3,5]
 
-  print tree2
-  print $ balance tree2
-  print $ inorder.balance $ tree2
+  print $ between (buildBalanced [3, 2, 2, 5, 1, 4, 4]) 3 4
+  print $ between (buildBalanced ["Adolfo","Diego","Juan","Pedro","Tomas"]) "B" "Q"
 
-  print tree3
-  print $ balance tree3
+test_tree t = do
+  putStrLn "--------------------------------------------"
+  print $ size t
+  print t
+  print $ preorder t
+  print $ postorder t
+  print $ inorder t
+  putStrLn "--------------------------------------------"
+
+test_list l = do
+  putStrLn "============================================"
+  print l
+  putStrLn "build"
+  test_tree t0
+  putStrLn "balance"
+  test_tree t1
+  putStrLn "build-balanced"
+  test_tree t2
+  putStrLn "============================================"
+  where
+    t0 = build l
+    t1 = balance t0
+    t2 = buildBalanced l
+    
